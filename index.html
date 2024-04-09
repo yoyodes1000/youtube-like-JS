@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Youtube-like</title>
+</head>
+<body>
+    <header>
+        <div class="header_left">
+            <div class="header_menu-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="header_logo">
+                <img src="assets/images/Youtube-Logo.png" alt="logo youtube">
+            </div>
+        </div>
+        <div class="header_searchbar">
+            <input type="text" placeholder=" Rechercher" class="header_input">
+            <div class="header_div_loupe">
+                <img src="assets/images/loupe.png" alt="logo de recherche" class="loupe">
+            </div>
+            <div class="header_div_micro">
+                <img src="assets/images/micro.png" alt="parlez ici" class="micro">
+            </div>
+        </div>
+        <div class="header_perso">
+            <img src="assets/images/camera-video.png" alt="créer" class="creation">
+            <img src="assets/images/cloche.png" alt="notifications" class="notification">
+            <img src="assets/images/lettre-j.png" alt="icone-personnel" class="icone-personnel">
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <nav>
+                <ul class="aside_navbar">
+                    <li>
+                        <img src="assets/images/maison-silhouette-noire-sans-porte.png" alt="icone d'accueil">
+                        <a href="#">Accueil</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/installation-facile.png" alt="icone shorts">
+                        <a href="#">Shorts</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/video.png" alt="icone abonnements">
+                        <a href="#">Abonnements</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="container_principal">
+            <div class="main_tag">
+                <div class="left-button">
+                    <button onclick="previous()" type="submit"><span>&lt;</span></button>
+                </div>
+                <div class="random-tags">
+                    <button id= "btn_all" class="tags newcolor">Tous</button>
+                </div> 
+                <div class="right-button">
+                    <button onclick="next()" type="submit"><span>&gt;</span></button>
+                </div>
+            </div>
+        
+            <div class="main_videos">
+            </div>
+    </main>
+    <script src="tags.js" type="module"></script>
+   <!-- <script src="videos.js" type="module"></script> -->
+</body>
+</html>
