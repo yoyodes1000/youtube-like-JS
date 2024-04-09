@@ -285,8 +285,15 @@ async function fetchVideo(array) {
   }
 }
 const allVideos = await fetchVideo(arrayData);
-console.log(arrayData);
-console.log(allVideos);
+
+const previous = document.getElementById("left_button");
+previous.onclick = function () {
+    document.getElementById("random-tags").scrollLeft += 100;
+};
+const next = document.getElementById("right_button");
+next.onclick = function () {
+    document.getElementById("random-tags").scrollLeft -= 100;
+};
 
 function dateCalculator(date) {
   const jour = 3600000 * 24;
@@ -342,14 +349,6 @@ function createArray(array) {
   return resultArray;
 }
 
-function previous() {
-  document.querySelector(".random-tags").scrollLeft -= 100;
-}
-
-function next() {
-  document.querySelector(".random-tags").scrollLeft += 100;
-}
-
 function cardGenerator(videoFiltered) {
   console.log(videoFiltered, "regarde ici");
   for (let i = 0; i < videoFiltered.length; i++) {
@@ -358,12 +357,12 @@ function cardGenerator(videoFiltered) {
     console.log(videoFiltered[i].title);
     div.innerHTML = `
         <div class="image">
-            <img src="https://picsum.photos/300/200?random=${i}">
+            <img src="https://picsum.photos/300/200?random=${getRandomNumber(100)}">
         </div>
         <div class="video_details">
             <div class="mise-en-page">
                 <div class="details_perso">
-                    <img src="https://picsum.photos/30/30?random=${i}">
+                    <img src="https://picsum.photos/30/30?random=${getRandomNumber(100)}">
                 </div>
                 <div class="video_title">
                     <h2>${videoFiltered[i].title}</h2>
@@ -384,6 +383,7 @@ function cardGenerator(videoFiltered) {
 cardGenerator(allVideos[0]);
 
 const btnAll = document.querySelector("#btn_all");
+
 btnAll.addEventListener("click", () => {
     const vignettes = document.querySelectorAll(".vignette_totale");
     const allButton = document.querySelectorAll(".tags");

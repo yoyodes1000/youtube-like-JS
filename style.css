@@ -185,33 +185,27 @@ ul.aside_navbar li a {
     border-radius: 10px;
     white-space: nowrap;
 }
-/* .random-tags .tags:first-child {
-    padding: 5px 10px;
-    margin: 0 3px;
-    color: white;
-    background-color: #000000;
-    border-radius: 10px;
-    white-space: nowrap;
-} */
 
-.left-button,
-.right-button {
+.left_button,
+.right_button {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 30px;
     height: 30px;
     margin: 0 10px;
 }
-button.left-button,
-button.right-button {
+button.left_button,
+button.right_button {
     width: 30px;
     height: 30px;
+    margin: 5px;
     cursor: pointer;
     border: none;
     background: none;
 }
-button.left-button:hover,
-button.right-button:hover {
+button.left_button:hover,
+button.right_button:hover {
     border: 1px solid #d1d1d1;
     background-color: #f3f3f3;
     border-radius: 50%;
